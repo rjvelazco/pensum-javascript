@@ -153,7 +153,7 @@
         "name": "PROGRAMACIÓN II",
         "uc": "5",
         "termId": "term5",
-        "related": [19, 18]
+        "related": 19
     },
     {
         "id": 25,
@@ -317,7 +317,7 @@
         "name": "SEMINARIO DE INVESTIGACIÓN I",
         "uc": "3",
         "termId": "term10",
-        "related": [36, 38]
+        "related": 38
     },
     {
         "id": 50,

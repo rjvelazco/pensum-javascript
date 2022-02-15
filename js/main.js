@@ -23,6 +23,7 @@ const STATE = {
   subjectsDone: {},
   studentSubjects: {},
   nextSubject: INITIAL_NEXT_SUBJECT,
+  UC: 0,
 };
 
 const updateNextSubject = (subject) => {
@@ -33,15 +34,19 @@ const updateNextSubject = (subject) => {
 };
 
 const updateStudentSubject = (termId) => {
+  console.log(STATE.studentSubjects, termId);
   STATE.studentSubjects[termId].push(STATE.nextSubject);
 };
 
-const updateSubjectsDone = (id) => {
-  STATE.subjectsDone[id] = STATE.nextSubject;
-};
+// const updateSubjectsDone = (id) => {
+//   STATE.subjectsDone[id] = STATE.nextSubject;
+// };
 
 const resetNextSubject = () => {
-  STATE.nextSubject = INITIAL_NEXT_SUBJECT;
+  STATE.nextSubject = {
+    ...INITIAL_NEXT_SUBJECT,
+    termId: STATE.nextSubject.termId,
+  };
 };
 
 // Utils
@@ -53,6 +58,17 @@ const sortTermSubjects = (termId) => {
   STATE.studentSubjects[termId].sort(function (a, b) {
     return a.id - b.id;
   });
+};
+
+const removeSeenSubjects = (subjectId) => {
+  subjects = subjects.filter((subject) => subject.id != subjectId);
+};
+
+const cleanStage = (termId, termSubjects) => {
+  fillSubSelector(termSubjects);
+  sortTermSubjects(termId);
+  resetNextSubject();
+  $gradeInput.value = "";
 };
 
 // Fill Selectors
@@ -150,33 +166,32 @@ const onSubmit = (event) => {
 
   updateNextSubject({ ...subject, grade, status });
   updateStudentSubject(termId);
-  updateSubjectsDone(subject.id);
+  // updateSubjectsDone(subject.id);
 
-  subjects = subjects.filter((subject) => subject.id != subjectId);
+  removeSeenSubjects(subject.id);
   const termSubjects = subjects.filter((subject) => subject.termId == termId);
-  sortTermSubjects(termId);
-  fillSubSelector(termSubjects);
+
+  cleanStage(termId, termSubjects);
   onUpdateTable();
-  resetNextSubject();
-  $gradeInput.value = "";
 };
 
 // Update Table
 const onUpdateTable = () => {
-  const terms = Object.keys(STATE.studentSubjects);
+  const subjects = STATE.studentSubjects;
+  const terms = Object.keys(subjects);
   const materiasTrimestre = [];
 
-  for (let index = 0; index < terms.length; index++) {
-    materiasTrimestre.push(STATE.studentSubjects[terms[index]].length);
+  for (let i = 0; i < terms.length; i++) {
+    materiasTrimestre.push(subjects[terms[i]].length);
   }
 
   const maxMaterias = Math.max(...materiasTrimestre);
   let html = "";
 
-  for (let index = 0; index < maxMaterias; index++) {
+  for (let i = 0; i < maxMaterias; i++) {
     html += `<tr>`;
-    for (let i = 0; i < terms.length; i++) {
-      const subject = STATE.studentSubjects[terms[i]][index];
+    for (let j = 0; j < terms.length; j++) {
+      const subject = subjects[terms[j]][i];
       html += createTableCell(subject);
     }
     html += `</tr>`;
@@ -190,7 +205,7 @@ const createTableCell = (data) => {
     return "<td></td>";
   }
 
-  return `<td class="${colors[data.status]}">
+  return `<td class="${colors[data.status] || ""}">
     ${data.name}
     <br/>
     <span>UC: ${data.uc}</span>

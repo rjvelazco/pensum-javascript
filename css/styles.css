@@ -92,6 +92,7 @@
 .pensum {
     border-collapse: collapse;
     width: 100%;
+    min-width: 1200px;
 }
   
 .pensum  td, .pensum  th {
@@ -102,7 +103,6 @@
 .pensum  th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #04AA6D;
     color: white;
 }
@@ -111,7 +111,9 @@
     display: none;
 }
 
-td {
+td, th {
+    width: 120px;
+    font-size: 12px;
     text-align: center;
 }
 
