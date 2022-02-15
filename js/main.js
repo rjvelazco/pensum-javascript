@@ -148,22 +148,6 @@ const onSubmit = (event) => {
   const subject = subjects.find((subject) => subject.id == subjectId);
   const termId = STATE.nextSubject.termId;
 
-  // if (subject.related) {
-  //   console.log("HEY");
-  //   const data = subjects
-  //     .filter((item) => item.id == subject.related)
-  //     .map((item) => item.name);
-
-  //   if (data.length) {
-  //     console.log(data);
-  //     $errorRelated.innerHTML = `Debes ver las siguientes materias: ${data.join(
-  //       " "
-  //     )}, antes de cursar la materia actual`;
-  //     $errorRelated.classList.remove("hidden");
-  //     return;
-  //   }
-  // }
-
   updateNextSubject({ ...subject, grade, status });
   updateStudentSubject(termId);
   // updateSubjectsDone(subject.id);
