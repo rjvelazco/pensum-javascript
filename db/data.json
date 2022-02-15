@@ -1,0 +1,398 @@
+[
+    {
+        "id": 1,
+        "name": "CÁLCULO I",
+        "uc": "5",
+        "termId": "term1"
+    },
+    {
+        "id": 2,
+        "name": "GEOMETRÍA",
+        "uc": "3",
+        "termId": "term1"
+    },
+    {
+        "id": 3,
+        "name": "ÁLGEBRA LINEAL",
+        "uc": "3",
+        "termId": "term1"
+    },
+    {
+        "id": 4,
+        "name": "LENGUAJE Y HABILIDADES COGNITIVAS",
+        "uc": "3",
+        "termId": "term1"
+    },
+    {
+        "id": 5,
+        "name": "METODOLOGÍA DE LA INVESTIGACIÓN",
+        "uc": "3",
+        "termId": "term1"
+    },
+    {
+        "id": 6,
+        "name": "ORIENTACIÓN",
+        "uc": "2",
+        "termId": "term1"
+    },
+    {
+        "id": 7,
+        "name": "CÁLCULO II",
+        "uc": "5",
+        "termId": "term2",
+        "related": 1
+    },
+    {
+        "id": 8,
+        "name": "DIBUJO COMPUTARIZADO",
+        "uc": "3",
+        "termId": "term2",
+        "related": 2
+    },
+    {
+        "id": 9,
+        "name": "FÍSICA I",
+        "uc": "5",
+        "termId": "term2",
+        "related": 1
+    },
+    {
+        "id": 10,
+        "name": "LÓGICA",
+        "uc": "2",
+        "termId": "term2"
+    },
+    {
+        "id": 11,
+        "name": "INTRODUCCIÓN A LA PROGRAMACIÓN",
+        "uc": "4",
+        "termId": "term2"
+    },
+    {
+        "id": 12,
+        "name": "CÁLCULO III",
+        "uc": "5",
+        "termId": "term3",
+        "related": 7
+    },
+    {
+        "id": 13,
+        "name": "QUÍMICA",
+        "uc": "5",
+        "termId": "term3",
+        "related": 7
+    },
+    {
+        "id": 14,
+        "name": "FÍSICA II",
+        "uc": "5",
+        "termId": "term3",
+        "related": 9
+    },
+    {
+        "id": 15,
+        "name": "INGLÉS I",
+        "uc": "2",
+        "termId": "term3"
+    },
+    {
+        "id": 16,
+        "name": "ACTIVIDAD FÍSICA Y SALUD",
+        "uc": "2",
+        "termId": "term3"
+    },
+    {
+        "id": 17,
+        "name": "CÁLCULO IV",
+        "uc": "5",
+        "termId": "term4",
+        "related": 12
+    },
+    {
+        "id": 18,
+        "name": "MATEMÁTICA DISCRETA",
+        "uc": "5",
+        "termId": "term4"
+    },
+    {
+        "id": 19,
+        "name": "PROGRAMACIÓN I",
+        "uc": "5",
+        "termId": "term4",
+        "related": 11
+    },
+    {
+        "id": 20,
+        "name": "INGLÉS II",
+        "uc": "2",
+        "termId": "term4",
+        "related": 15
+    },
+    {
+        "id": 21,
+        "name": "ACTIVIDADES RECREACIONALES",
+        "uc": "2",
+        "termId": "term4",
+        "related": 16
+    },
+    {
+        "id": 22,
+        "name": "DESARROLLO SUSTENTABLE",
+        "uc": "3",
+        "termId": "term5"
+    },
+    {
+        "id": 23,
+        "name": "ESTADÍSTICA",
+        "uc": "3",
+        "termId": "term5",
+        "related": 12
+    },
+    {
+        "id": 24,
+        "name": "PROGRAMACIÓN II",
+        "uc": "5",
+        "termId": "term5",
+        "related": [19, 18]
+    },
+    {
+        "id": 25,
+        "name": "INGLÉS III",
+        "uc": "2",
+        "termId": "term5",
+        "related": 20
+    },
+    {
+        "id": 26,
+        "name": "HARDWARE DE COMPUTADORA",
+        "uc": "3",
+        "termId": "term5"
+    },
+    {
+        "id": 27,
+        "name": "SISTEMAS OPERATIVOS",
+        "uc": "3",
+        "termId": "term5"
+    },
+    {
+        "id": 28,
+        "name": "CALIDAD Y PRODUCTIVIDAD",
+        "uc": "3",
+        "termId": "term6",
+        "related": 23
+    },
+    {
+        "id": 29,
+        "name": "BASE DE DATOS I",
+        "uc": "5",
+        "termId": "term6",
+        "related": 24
+    },
+    {
+        "id": 30,
+        "name": "PROGRAMACIÓN III",
+        "uc": "5",
+        "termId": "term6",
+        "related": 24
+    },
+    {
+        "id": 31,
+        "name": "INGLÉS IV",
+        "uc": "2",
+        "termId": "term6",
+        "related": 25
+    },
+    {
+        "id": 32,
+        "name": "GESTIÓN DE PROYECTOS INFORMÁTICOS",
+        "uc": "4",
+        "termId": "term6"
+    },
+    {
+        "id": 33,
+        "name": "BASE DE DATOS II",
+        "uc": "5",
+        "termId": "term7",
+        "related": 29
+    },
+    {
+        "id": 34,
+        "name": "TEORÍA GENERAL DE SISTEMAS",
+        "uc": "4",
+        "termId": "term7",
+        "related": 32
+    },
+    {
+        "id": 35,
+        "name": "COMPILADORES",
+        "uc": "5",
+        "termId": "term7",
+        "related": 30
+    },
+    {
+        "id": 36,
+        "name": "INGLÉS V",
+        "uc": "2",
+        "termId": "term7",
+        "related": 31
+    },
+    {
+        "id": 37,
+        "name": "INGENIERÍA ECONÓMICA",
+        "uc": "3",
+        "termId": "term7"
+    },
+    {
+        "id": 38,
+        "name": "SERVICIO COMUNITARIO (LEY)",
+        "uc": "0",
+        "termId": "term7"
+    },
+    {
+        "id": 39,
+        "name": "REDES I",
+        "uc": "5",
+        "termId": "term8"
+    },
+    {
+        "id": 40,
+        "name": "INGENIERÍA DEL SOFTWARE I",
+        "uc": "5",
+        "termId": "term8",
+        "related": 34
+    },
+    {
+        "id": 41,
+        "name": "COMPUTACIÓN GRÁFICA",
+        "uc": "5",
+        "termId": "term8",
+        "related": 35
+    },
+    {
+        "id": 42,
+        "name": "ELECTIVA I",
+        "uc": "2",
+        "termId": "term8"
+    },
+    {
+        "id": 43,
+        "name": "OPTATIVA I",
+        "uc": "2",
+        "termId": "term8"
+    },
+    {
+        "id": 44,
+        "name": "REDES II",
+        "uc": "5",
+        "termId": "term9",
+        "related": 39
+    },
+    {
+        "id": 45,
+        "name": "INGENIERÍA DEL SOFTWARE II",
+        "uc": "5",
+        "termId": "term9",
+        "related": 40
+    },
+    {
+        "id": 46,
+        "name": "MULTIMEDIA Y DISEÑO WEB",
+        "uc": "5",
+        "termId": "term9"
+    },
+    {
+        "id": 47,
+        "name": "ELECTIVA II",
+        "uc": "2",
+        "termId": "term9"
+    },
+    {
+        "id": 48,
+        "name": "OPTATIVA II",
+        "uc": "2",
+        "termId": "term9"
+    },
+    {
+        "id": 49,
+        "name": "SEMINARIO DE INVESTIGACIÓN I",
+        "uc": "3",
+        "termId": "term10",
+        "related": [36, 38]
+    },
+    {
+        "id": 50,
+        "name": "AUDITORÍA Y EVALUACIÓN DE SISTEMAS",
+        "uc": "4",
+        "termId": "term10"
+    },
+    {
+        "id": 51,
+        "name": "PROGRAMACIÓN WEB",
+        "uc": "5",
+        "termId": "term10",
+        "related": 46
+    },
+    {
+        "id": 52,
+        "name": "INTELIGENCIA ARTIFICIAL",
+        "uc": "5",
+        "termId": "term10"
+    },
+    {
+        "id": 53,
+        "name": "OPTATIVA III",
+        "uc": "2",
+        "termId": "term10"
+    },
+    {
+        "id": 54,
+        "name": "SEMINARIO DE INVESTIGACIÓN II",
+        "uc": "3",
+        "termId": "term11",
+        "related": 49
+    },
+    {
+        "id": 55,
+        "name": "SIMULACIÓN DE SISTEMAS",
+        "uc": "5",
+        "termId": "term11"
+    },
+    {
+        "id": 56,
+        "name": "DESARROLLO DE LA CAPACIDAD EMPRENDEDORA",
+        "uc": "2",
+        "termId": "term11"
+    },
+    {
+        "id": 57,
+        "name": "ADMINISTRACIÓN DE CENTROS DE INFORMÁTICA",
+        "uc": "4",
+        "termId": "term11"
+    },
+    {
+        "id": 58,
+        "name": "ELECTIVA III",
+        "uc": "2",
+        "termId": "term11"
+    },
+    {
+        "id": 59,
+        "name": "ÉTICA Y DEONTOLOGÍA",
+        "uc": "3",
+        "termId": "term11"
+    },
+    {
+        "id": 60,
+        "name": "SEMINARIO DE INVESTIGACIÓN III",
+        "uc": "9",
+        "termId": "term12",
+        "related": 54
+    },
+    {
+        "id": 61,
+        "name": "PASANTÍA ACADÉMICA",
+        "uc": "10",
+        "termId": "term12",
+        "related": 54
+    }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensum</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+    <h1>Pensum Ingenieria en Informatica</h1>
+
+    <div class="container" onsubmit="onSubmit(event)">
+        <form class="term-form" id="form">
+            <div class="input-container">
+                <div>
+                    <select class="select-input subject" id="subject-selector" disabled>
+                        <option>Materia</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="select-input term" onchange="selectorHandler(event)" id="term-selector" disabled>
+                        <option>Trimestre</option>
+                    </select>
+                </div>
+            </div>
+            <div class="radio-container">
+                <span>Estatus de la Materia</span>
+                <div class="input-container">
+                    <div>
+                        <input type="radio" id="cursando" name="status" onClick="handlerRadioChange(event)"
+                            value="cursando" checked />
+                        <label for="cursando">cursando</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="vista" name="status" onClick="handlerRadioChange(event)"
+                            value="vista" />
+                        <label for="vista">Vista</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-container grade-container hidden">
+                <input type="text" id="grade" class="grade-input" placeholder="Nota" oninput="hideErrorMessage()" />
+                <span class="errorMessage hidden" id="error-message">La nota debe ser un valor numero entre 0 y
+                    20</span>
+            </div>
+            <span class="errorMessage hidden" id="error-related">sada</span>
+            <div>
+                <button type="submit" class="btn" id="btn-submit" disabled>Agregar Materia</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="pensum-container">
+        <table class="pensum">
+            <thead>
+                <tr>
+                    <th>Term 1</th>
+                    <th>Term 2</th>
+                    <th>Term 3</th>
+                    <th>Term 4</th>
+                    <th>Term 5</th>
+                    <th>Term 6</th>
+                    <th>Term 7</th>
+                    <th>Term 8</th>
+                    <th>Term 9</th>
+                    <th>Term 10</th>
+                    <th>Term 11</th>
+                    <th>Term 12</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

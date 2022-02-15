@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "termId": "term1",
+        "name": "PRIMERO"
+    },
+    {
+        "id": 2,
+        "termId": "term2",
+        "name": "SEGUNDO"
+    },
+    {
+        "id": 3,
+        "termId": "term3",
+        "name": "TERCERO"
+    },
+    {
+        "id": 4,
+        "termId": "term4",
+        "name": "CUARTO"
+    },
+    {
+        "id": 5,
+        "termId": "term5",
+        "name": "QUINTO"
+    },
+    {
+        "id": 6,
+        "termId": "term6",
+        "name": "SEXTO"
+    },
+    {
+        "id": 7,
+        "termId": "term7",
+        "name": "SEPTIMO"
+    },
+    {
+        "id": 8,
+        "termId": "term8",
+        "name": "OCTAVO"
+    },
+    {
+        "id": 9,
+        "termId": "term9",
+        "name": "NOVENO"
+    },
+    {
+        "id": 10,
+        "termId": "term10",
+        "name": "DECIMO"
+    },
+    {
+        "id": 11,
+        "termId": "term11",
+        "name": "ONCEAVO"
+    },
+    {
+        "id": 12,
+        "termId": "term12",
+        "name": "DOCEAVO"
+    }
+
+]
