@@ -6,7 +6,8 @@ const $subSelector = document.querySelector("#subject-selector");
 const $termSelector = document.querySelector("#term-selector");
 const $gradeContainer = document.querySelector(".grade-container");
 const $errorMessage = document.querySelector("#error-message");
-const $errorRelated = document.querySelector("#error-related");
+const $errorUC = document.querySelector("#error-uc");
+const $ucSpan = document.querySelector("#uc-totales");
 
 let subjects = [];
 
@@ -34,8 +35,11 @@ const updateNextSubject = (subject) => {
 };
 
 const updateStudentSubject = (termId) => {
-  console.log(STATE.studentSubjects, termId);
   STATE.studentSubjects[termId].push(STATE.nextSubject);
+};
+
+const updateUC = (uc) => {
+  STATE.UC = uc;
 };
 
 // const updateSubjectsDone = (id) => {
@@ -136,6 +140,7 @@ const onSubmit = (event) => {
   event.preventDefault();
   let status = STATE.nextSubject.status;
   const grade = +$gradeInput.value || null;
+  INITIAL_NEXT_SUBJECT.status = status;
 
   if (status === "vista" && !isGradeValid(grade)) {
     $errorMessage.classList.remove("hidden");
@@ -147,9 +152,20 @@ const onSubmit = (event) => {
   const subjectId = $subSelector.options[$subSelector.selectedIndex].value;
   const subject = subjects.find((subject) => subject.id == subjectId);
   const termId = STATE.nextSubject.termId;
+  const currentUc = +subject.uc;
+  const totalUC = STATE.UC + currentUc;
+
+  if (status === "cursando" && totalUC > 19) {
+    $errorUC.innerHTML = `Si estas viendo esa materia sobresarias las unidades de creditos permitidas [19 UC] con ${totalUC}`;
+    $errorUC.classList.remove("hidden");
+    return;
+  } else {
+    $errorUC.classList.add("hidden");
+  }
 
   updateNextSubject({ ...subject, grade, status });
   updateStudentSubject(termId);
+  addUC(totalUC);
   // updateSubjectsDone(subject.id);
 
   removeSeenSubjects(subject.id);
@@ -157,6 +173,11 @@ const onSubmit = (event) => {
 
   cleanStage(termId, termSubjects);
   onUpdateTable();
+};
+
+const addUC = (uc) => {
+  updateUC(uc);
+  $ucSpan.innerHTML = STATE.UC;
 };
 
 // Update Table
